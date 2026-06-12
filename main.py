@@ -2,11 +2,11 @@ import pickle
 import requests
 from sklearn.metrics.pairwise import cosine_similarity
 import streamlit as st
+import os
 
-# 🔑 API KEYS
-OMDB_API_KEY = "20f625df"
-TMDB_API_KEY = "54c93a357fa05944c6c8be5eca152cfa"
-YOUTUBE_API_KEY = "AIzaSyCw8gPBIs-Sb-f6s1SOJ3Pjn8NsClcsW4g"
+TMDB_API_KEY = os.getenv("TMDB_API_KEY")
+YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY")
+OMDB_API_KEY = os.getenv("OMDB_API_KEY")
 
 # Load data
 df = pickle.load(open("df.pkl", "rb"))
