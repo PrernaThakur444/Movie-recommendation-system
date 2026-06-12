@@ -3,6 +3,9 @@ import requests
 from sklearn.metrics.pairwise import cosine_similarity
 import streamlit as st
 import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 TMDB_API_KEY = os.getenv("TMDB_API_KEY")
 YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY")
